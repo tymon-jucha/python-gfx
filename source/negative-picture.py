@@ -13,6 +13,6 @@ pixels = image.load()
 for y in range(image.height):
     for x in range(image.width):
         (r, g, b) = pixels[x, y]
-        pixels[x, y] = (r, g, b)
+        pixels[x, y] = (255 - r, 255 - g, 255 - b)
 
 image.show()

@@ -13,6 +13,7 @@ pixels = image.load()
 for y in range(image.height):
     for x in range(image.width):
         (r, g, b) = pixels[x, y]
-        pixels[x, y] = (r, g, b)
+        brightness = (r * 30 + g * 60 + b * 10) // 100
+        pixels[x, y] = (brightness, brightness, brightness)
 
 image.show()
